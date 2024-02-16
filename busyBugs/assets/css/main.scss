@@ -1,0 +1,601 @@
+@font-face {
+   font-family: Grandstander;
+   src: url(../fonts/static/Grandstander-Black.ttf);
+}
+
+body{
+  background-color: #f3eeff;
+}
+
+// nav bar
+
+.header{
+  // font-family: Grandstander;
+  font-size: 17px;
+  background-color: #9b84db;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  width: 100%;
+  margin-top:-12px;
+  margin-left: -8px;
+  margin-right: -8px;
+  box-shadow:0px 0px 10px 5px #888;
+  position: fixed;
+}
+
+.header{
+  li{
+    display:inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    .logo{
+      transform: translate(0,10px);
+      border-radius: 3px;
+      // border: 1px solid black;
+    }
+    input{
+      border: 1px solid #0d0d0d;
+      border-radius: 10px;
+      height: 30px;
+      font-size: 15px;
+      outline:none;
+      padding-left: 40px;
+      margin-left: -20px;
+    }
+    button{
+      font-weight: bold;
+      font-size: 13px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border: 1px solid black;
+      border-radius: 3px;
+      background-color: white;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: #192794;
+      color: white;
+      box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.3);
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+.s_course{
+  width: 460px;
+}
+
+.s_tutors{
+  width: 260px;
+}
+
+.bx-search-alt{
+  transform: translate(10px);
+  font-weight: bold;
+}
+
+.ico-search{
+  transform: translate(12px,5px);
+  height: 20px;
+}
+
+.ico-heart{
+  height: 18px;
+  transform: translate(0,3px);
+}
+
+.ico-cart{
+  height: 18px;
+  transform: translate(0,3px);
+}
+
+.tooltip{
+  cursor: pointer;
+}
+
+.toolpos1{
+  visibility: hidden;
+
+  /* Position the tooltip */
+  padding-top: 40px;
+  position: absolute;
+  top:50px;
+  left:110px;
+}
+
+.toolpos2{
+  visibility: hidden;
+
+  /* Position the tooltip */
+  padding-top: 40px;
+  position: absolute;
+  top:50px;
+  left:78%;
+}
+
+.tool_element {
+
+  width: 250px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid black;
+
+  p{
+    margin-left:20px;
+  }
+
+  p:hover{
+    color: #916afc;
+  }
+
+}
+
+.tooltip:hover .toolpos1 {
+  visibility: visible;
+}
+
+.tooltip:hover .toolpos2 {
+  visibility: visible;
+}
+
+// Login modal
+
+.log-modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.log-modal-element{
+  background-color: #f3eeff;
+  height: 400px;
+  width: 350px;
+  border-radius: 10px;
+  position:absolute;
+  border: 1px solid black;
+  padding:20px;
+  padding-top: 40px;
+  // box-shadow: 0px 0px 10px 5px #888;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .l_close{
+    height:10px;
+    transform:translate(220px,-40px);
+    cursor: pointer;
+  }
+
+  #tmp-sign-btn{
+    cursor: pointer;
+  }
+
+  img{
+    margin-top: 15px;
+    height:50px;
+  }
+
+  a{
+    color: #272eab;
+    text-decoration: none;
+  }
+
+  button{
+    transform: translate(0px,-25px);
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #192794;
+    color: white;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+  .icon{
+    transform:translate(-115px,-35px);
+    height:15px;
+  }
+}
+
+.slide-fwd{
+  animation: lmodal 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+@keyframes lmodal{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.h-log{
+  font-family: 'Noto Serif Vithkuqi', serif;
+  font-size: 30px;
+}
+
+.log_input{
+  width:225px;
+  font-size: 15px;
+  border: none;
+  border-bottom:2px solid black;
+  outline: none;
+  background-color: transparent;
+  padding-left: 25px;
+}
+
+.forgot{
+  transform: translate(73px,-30px);
+}
+
+// Sign Up
+.sign-modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.sign-modal-element{
+  background-color: #f3eeff;
+  height: 400px;
+  width: 800px;
+  border-radius: 10px;
+  position:absolute;
+  border: 1px solid black;
+  // padding:20px;
+  padding-top: 40px;
+  // box-shadow: 0px 0px 10px 5px #888;
+  // text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .S_close{
+    height:10px;
+    transform:translate(445px,-45px);
+    cursor: pointer;
+  }
+
+  .slabel{
+    display: table;
+    clear: both;
+    padding-bottom: 20px;
+  }
+
+  table{
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  a{
+    color: #272eab;
+    text-decoration: none;
+  }
+
+  button{
+    // transform: translate(0px,-25px);
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #192794;
+    color: white;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  #tmp-log-btn{
+    cursor: pointer;
+  }
+  // .icon{
+  //   transform:translate(-115px,-35px);
+  //   height:15px;
+  // }
+}
+
+.slide-fwd{
+  animation: Smodal 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+@keyframes Smodal{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.h-sign{
+  font-family: 'Noto Serif Vithkuqi', serif;
+  font-size: 30px;
+}
+
+.sign_input{
+  width:225px;
+  font-size: 15px;
+  border: none;
+  border-bottom:2px solid black;
+  outline: none;
+  background-color: transparent;
+  margin-left: 26px;
+  margin-bottom: 25px;
+}
+
+.pro2{
+  margin:auto;
+  margin-top: 30px;
+  // transform: translate(12px,0);
+  // height:200px;
+  width: 100%;
+  border: 1px solid #888;
+  position: static;
+}
+// Home card
+
+.h_card{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left:-8px;
+  margin-right:-8px;
+  height:500px;
+  border: 1px solid #888;
+  padding-top: 100px;
+  background-color: #d8d1e8;
+  position: static;
+
+  .frnds{
+    height: 450px;
+    position: static;
+    margin-top:50px;
+    // padding:9px;
+    // margin-left:2px;
+  }
+
+  .tutor{
+    height: 450px;
+    position: static;
+    // padding:9px;
+    margin:auto;
+    margin-top:50px;
+  }
+
+  /* Apply styles to the slogan */
+.slog {
+    font-size: 35px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make it bold for emphasis */
+    color: #333; /* Set the text color to your preference */
+    text-align: center; /* Center the text within its container */
+    // margin-top: 20px; /* Add space from the top of the container */
+}
+.slog1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    // font-weight: bold; /* Make it bold for emphasis */
+    color: #333; /* Set the text color to your preference */
+    text-align: center; /* Center the text within its container */
+    // margin-top: 20px; /* Add space from the top of the container */
+}
+
+/* Add a background color or image to a container */
+.h-card-slog-container {
+    // background-color: #007bff; /* Change the background color to your preference */
+    position: static;
+    margin-top: 120px;
+    // transform: translate(0%,-25%);
+    padding: 20px; /* Add padding to create some space around the slogan */
+    // border-radius: 10px; /* Add rounded corners for a modern look */
+}
+
+.submit-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 0px;
+            background-color: #9b84db;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #000;
+        }
+
+        .submit-button:hover {
+            // background-color: #45a049;
+            transform: translateY(-8px);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-button:active {
+            transform: translateY(1px);
+            box-shadow: none;
+        }
+
+}
+
+// Categories
+#cat-div{
+  display: none;
+  position: fixed;
+  // z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+}
+.category-div{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto;
+  background-color: #9b84db;
+  margin-top: 10px;
+  // margin-left: -7px;
+  // margin-right: -7px;
+  padding:2px;
+  position: relative;
+  margin-top: 75px;
+  height: auto;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-15 22:22:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-ver-top
+ * ----------------------------------------
+ */
+ .scale-in-ver-top {
+	-webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+.category-ele{
+  background-color: #f3eeff;
+  margin: 2px;
+  border-radius: 5px;
+  height: auto;
+  // overflow: auto;
+
+  .cat-head{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top:30px;
+    margin-left:30px;
+    color:#69587a;
+  }
+
+  .cat-body{
+    margin-left:40px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.course_area{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: auto;
+  background-color:#3a3540;
+  margin-top:30px;
+  margin-left:-8px;
+  margin-right:-8px;
+  padding: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border: 1px solid #888;
+  color:#000;
+  font-weight: bold;
+
+
+  .course{
+    margin: 40px;
+    background-color: #efe1fa;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 45px;
+    padding-top: 15px;
+    color: #3a3540;
+
+    .c_head{
+      font-size: 30px;
+    }
+
+    .c_dec{
+      font-size: 16px;
+      position: relative;
+      transform: translate(0,-10px);
+    }
+
+    .c_but{
+      height: 40px;
+      width: 200px;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: #3a3540;
+      color: #fff;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.quiz-container{
+
+    width: 100%;
+    
+}
